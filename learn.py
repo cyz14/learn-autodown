@@ -150,7 +150,7 @@ def download(url, path):
 def NTFSSan(s):
     s = s.replace(u'\xa0', u' ')
     s = s.rstrip(u' ')
-    p = re.compile(r'[/:\*<>\"\?\|]')
+    p = re.compile(r'[:\*<>\"\?\|]')
     return p.sub("_", s)
 
 def urlEncodeNonAscii(b):
